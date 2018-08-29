@@ -4,12 +4,9 @@ from time import sleep
 import datetime
 import sys
 
-
+# Takes 1 input paramebter : The GPIO Pin number to which the device (motor, led, etc..) sends signal for intitialization
+# once initialized/powered on, the signal is maintained for 10 seconds - this can be adjusted to your needs.
 def run_gpio(pin):
-'''
-Takes 1 input paramebter : The GPIO Pin number to which the device (motor, led, etc..) sends signal for intitialization
-once initialized/powered on, the signal is maintained for 10 seconds - this can be adjusted to your needs.
-'''
     try:
         # The script as below using BCM GPIO 00..nn numbers
         GPIO.setmode(GPIO.BCM)
